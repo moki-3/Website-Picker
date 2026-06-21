@@ -25,6 +25,9 @@ export default function Mainpage() {
     window.open("https://hackatime.hackclub.com/@moki", "_blank");
   }
 
+  const toImpressum = () => {
+    navigate("/legal/imprint");
+  }
 
   const [showTopBox, setShowTopBox] = useState(true);
 
@@ -32,19 +35,24 @@ export default function Mainpage() {
 
   const acceptCookies = () => {
     setShowTopBox(false);
+    setShowMoki(true);
     localStorage.setItem("Website-Picker-Cookies", "true");
+  }
+
+  const declineCookies = () => {
+    setShowTopBox(false);
+    setShowMoki(true);
   }
 
   useEffect(() => {
     const stored = localStorage.getItem("Website-Picker-Cookies");
-    if (stored == "true") {
+    if (stored === "true") {
       setShowTopBox(false);
       setShowMoki(true);
     }else{
         setShowMoki(false);
+        setShowTopBox(true);
     }
-    //zum testen
-    //localStorage.setItem("Website-Picker-Cookies", "false");
   }, []);
 
   const [showMoki, setShowMoki] = useState(false);
@@ -56,7 +64,7 @@ export default function Mainpage() {
         <div className="middle-box">
           For the most fun, you'll need cookies!🍪
           <button className="accept" onClick={acceptCookies}>Give me 'em cookies 🍪</button>
-          <button className="decline" onClick={() => setShowTopBox(false)}>I don't like cookies 🚫</button>
+          <button className="decline" onClick={declineCookies}>I don't like cookies 🚫</button>
         </div>
 
 
@@ -75,10 +83,10 @@ export default function Mainpage() {
         </div>
       </div>}
 
-        {showMoki && <div className="topBox">Ⓒ Moki 2026</div>}
+        {showMoki && <div className="topBox"><div>Ⓒ Moki 2026</div> <div className="imprint-link" onClick={toImpressum}>Imprint</div></div>}
 
       {showPopUpInfo && (
-    <div className="center-all">For transparency: With cookies, I mean localstorage. I am saving data to enhance the user experience.</div>
+    <div className="center-info"><p>For transparency: With cookies, I mean localstorage. I am saving data to enhance the user experience.</p></div>
 )}
 
       <div className="ceneter-all">
@@ -156,6 +164,7 @@ export default function Mainpage() {
           </div>
         </div>
       </div>
+      
     </>
-  );
+  )
 }

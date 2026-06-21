@@ -8,6 +8,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: sans-serif;
+  margin: 0;
 }
 
 .topBox {
@@ -64,17 +65,6 @@ body {
   transform: scale(0.7);
 }
 
-@media screen and (max-width: 480px) {
-  .topBox {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .topBox svg{
-    color: black;
-  }
-}
-
 .ceneter-all {
   display: flex;
   justify-content: center;
@@ -93,7 +83,6 @@ body {
 .center-box > *:last-child:nth-child(odd) {
   grid-column: 1 / -1;
   justify-self: center;
-  /* width: calc(50% - 6px); */
 }
 
 .single-card {
@@ -138,7 +127,7 @@ body {
   color: white;
 }
 .hachClub:hover {
-  transform: rotate(15deg) translateY(-10px) scale(1.1);
+  transform: rotate(15deg) translateY(10px) scale(1.1);
 }
 
 .portfolio {
@@ -147,4 +136,56 @@ body {
 
 .portfolio:hover {
   transform: rotate(-10deg) translateY(-10px) scale(1.1);
+}
+
+.center-info{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.center-info p{
+  width: 80%;
+}
+
+.imprint-link:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+  .topBox {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .topBox svg {
+    color: black;
+  }
+
+  .center-box {
+    grid-template-columns: 1fr;
+  }
+
+  .center-box > *:last-child:nth-child(odd) {
+    grid-column: auto;
+    justify-self: auto;
+  }
+
+  .ceneter-all {
+    background-color: none;
+  }
+
+  .center-box{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .single-card {
+    width: 100%;
+  }
 }

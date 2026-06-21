@@ -1,0 +1,41 @@
+.back-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: white;
+}
+
+.back-link{
+    color: white !important;
+    padding: 1rem;
+}
+
+.around-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.center-box-imprint {
+  width: 80%;
+  margin: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(8.7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.center-box-imprint a{
+    color: white !important;
+}
+
+.delete-cookies{
+    color: rgb(247, 131, 131);
+    text-decoration: underline;
+    cursor: pointer;
+}

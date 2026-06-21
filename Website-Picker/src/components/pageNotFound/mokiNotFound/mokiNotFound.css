@@ -1,0 +1,35 @@
+.back-link-pageNotFound:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.back-link-pageNotFound{
+    padding: 1rem;
+    background-color: white;
+}
+
+.pageNotFoundRoot {
+  background: none;
+  background-color: white !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.warning{
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+
+.warning img{
+    width: 100%;
+    height: auto;
+}
