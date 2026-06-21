@@ -188,4 +188,9 @@ body {
   .single-card {
     width: 100%;
   }
+
+
+  .single-card:hover{
+    transform: none !important;
+  }
 }
