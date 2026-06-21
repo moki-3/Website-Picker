@@ -60,6 +60,7 @@ export default function Impressum() {
             </a>
             , if you have any questions!
           </p>
+          <p>I used <a href="https://icons.getbootstrap.com" target="_blank">Bootstrap Icons</a> for all the icons on this website. The construction site image was created by me!</p>
           {showDelete && <div className="delete-cookies" onClick={deleteCookies}>Delete cookies</div>}
         </div>
       </div>

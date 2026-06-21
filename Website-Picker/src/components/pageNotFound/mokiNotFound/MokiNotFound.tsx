@@ -33,7 +33,7 @@ export default function MokiNotFound() {
         <div className="warning">
             <img src="/Baustelle-monochrome.png" alt="Construction Site" />
             <p>Whoa, not so fast!</p>
-            <p>This page is not finshed yet! Come back later, to check if something changed!</p>
+            <p>This page isn't finished yet! Check back later to see if anything has changed!</p>
         </div>
       </div>
   </div>);

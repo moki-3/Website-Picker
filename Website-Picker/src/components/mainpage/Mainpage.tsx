@@ -83,7 +83,7 @@ export default function Mainpage() {
         </div>
       </div>}
 
-        {showMoki && <div className="topBox"><div>Ⓒ Moki 2026</div> <div className="imprint-link" onClick={toImpressum}>Imprint</div></div>}
+        {showMoki && <div className="topBox"><div>Ⓒ Moki 2026</div> <div className="imprint-link" onClick={toImpressum}>Imprint & Info</div></div>}
 
       {showPopUpInfo && (
     <div className="center-info"><p>For transparency: With cookies, I mean localstorage. I am saving data to enhance the user experience.</p></div>
