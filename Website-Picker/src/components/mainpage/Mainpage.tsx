@@ -37,11 +37,13 @@ export default function Mainpage() {
     setShowTopBox(false);
     setShowMoki(true);
     localStorage.setItem("Website-Picker-Cookies", "true");
+    setShowPopUpInfo(false);
   }
 
   const declineCookies = () => {
     setShowTopBox(false);
     setShowMoki(true);
+    setShowPopUpInfo(false);
   }
 
   useEffect(() => {
