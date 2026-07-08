@@ -4,7 +4,6 @@ import { useLocation } from "wouter";
 import { useEffect } from "react";
 
 export default function Mainpage() {
-	// test von pi
   const [, navigate] = useLocation();
 
   const toGithub = () => {
